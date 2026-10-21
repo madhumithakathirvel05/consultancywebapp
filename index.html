@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajendran's Consultancy | Documentation &amp; Consultancy, Marakkanam</title>
+<meta name="description" content="Property documentation, sale deed drafting, Patta and Chitta assistance, registration coordination and paperless work consultation in Marakkanam, Tamil Nadu.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📑</text></svg>">
+<style>
+  :root {
+    --blue: #1d4ed8;
+    --blue-dark: #1e3a8a;
+    --blue-soft: #e0e9ff;
+    --purple: #7c3aed;
+    --purple-dark: #5b21b6;
+    --purple-soft: #f1e9ff;
+    --white: #ffffff;
+    --ink: #0f172a;
+    --ink-soft: #475569;
+    --line: #e2e8f0;
+    --bg-soft: #f8faff;
+    --danger: #b91c1c;
+    --success: #047857;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(30, 58, 138, 0.10);
+    --shadow-hover: 0 18px 40px rgba(30, 58, 138, 0.18);
+    --grad: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { max-width: 100%; display: block; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--purple);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 12px; color: var(--ink); }
+  h1 { font-size: clamp(2rem, 4.6vw, 3.5rem); letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); letter-spacing: -0.01em; }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0 0 12px; color: var(--ink-soft); }
+  .container { width: 100%; max-width: 1184px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 88px 0; position: relative; }
+  .section-alt { background: var(--bg-soft); }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 12px;
+  }
+  .section-head { max-width: 720px; margin-bottom: 48px; }
+  .section-head p { font-size: 1.05rem; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 48px; padding: 12px 24px; border-radius: 12px;
+    font: inherit; font-weight: 600; font-size: 0.98rem;
+    border: 2px solid transparent; cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+    text-decoration: none; white-space: normal; text-align: center;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+  .btn-primary { background: var(--grad); color: var(--white); box-shadow: 0 10px 24px rgba(124, 58, 237, 0.28); }
+  .btn-primary:hover { box-shadow: 0 14px 30px rgba(124, 58, 237, 0.36); color: var(--white); }
+  .btn-outline { background: var(--white); color: var(--blue); border-color: var(--blue); }
+  .btn-outline:hover { background: var(--blue-soft); color: var(--blue-dark); }
+  .btn-ghost { background: transparent; color: var(--purple); border-color: var(--purple); }
+  .btn-ghost:hover { background: var(--purple-soft); }
+  .btn[disabled], .btn[aria-disabled="true"] { opacity: .6; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-link-arrow::after { content: "→"; transition: transform .2s ease; }
+  .btn-link-arrow:hover::after { transform: translateX(3px); }
+
+  /* Trust ribbon */
+  .ribbon { background: var(--blue-dark); color: #dbe6ff; font-size: 0.82rem; }
+  .ribbon .container {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    gap: 8px 24px; min-height: 40px; padding-top: 8px; padding-bottom: 8px;
+  }
+  .ribbon span { display: inline-flex; align-items: center; gap: 8px; }
+  .ribbon a { color: var(--white); font-weight: 600; }
+
+  /* Header */
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 800; }
+  .brand:hover { text-decoration: none; }
+  .brand-mark {
+    width: 40px; height: 40px; border-radius: 12px; background: var(--grad);
+    color: var(--white); display: grid; place-items: center; font-weight: 800; font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .brand-text { line-height: 1.1; font-size: 1rem; }
+  .brand-text small { display: block; font-weight: 500; color: var(--ink-soft); font-size: 0.75rem; letter-spacing: 0.02em; }
+  .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a {
+    color: var(--ink-soft); font-weight: 600; font-size: 0.92rem;
+    padding: 8px 12px; border-radius: 10px; display: inline-block;
+  }
+  .nav-links a:hover { color: var(--blue); background: var(--blue-soft); text-decoration: none; }
+  .nav-links a.active { color: var(--purple); }
+  .nav-cta { display: flex; align-items: center; gap: 10px; }
+  .nav-toggle {
+    display: none; width: 48px; height: 48px; border: 1px solid var(--line);
+    border-radius: 12px; background: var(--white); cursor: pointer; padding: 0;
+    align-items: center; justify-content: center;
+  }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+    content: ""; display: block; width: 20px; height: 2px; background: var(--ink);
+    border-radius: 2px; position: relative; transition: transform .25s ease, background .25s ease;
+  }
+  .nav-toggle span::before { position: absolute; transform: translateY(-6px); }
+  .nav-toggle span::after { position: absolute; transform: translateY(6px); }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { transform: rotate(-45deg); }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(124,58,237,.12), transparent 40%),
+      radial-gradient(circle at 0% 100%, rgba(29,78,216,.12), transparent 45%),
+      var(--white);
+    padding: 72px 0 80px;
+  }
+  .hero-glow {
+    position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; opacity: .5;
+  }
+  .hero-glow.one { width: 340px; height: 340px; background: rgba(124,58,237,.25); top: -140px; right: -120px; }
+  .hero-glow.two { width: 300px; height: 300px; background: rgba(29,78,216,.22); bottom: -150px; left: -120px; }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px;
+    border-radius: 999px; background: var(--purple-soft); color: var(--purple-dark);
+    font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;
+  }
+  .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--purple); }
+  .hero h1 span { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-lead { font-size: 1.1rem; max-width: 620px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 36px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 640px; }
+  .stat {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px 18px 16px; box-shadow: var(--shadow);
+  }
+  .stat strong { display: block; font-size: 1.7rem; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.1; }
+  .stat small { display: block; margin-top: 6px; font-size: 0.7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  .hero-visual {
+    position: relative; border-radius: 24px; min-height: 460px; padding: 28px;
+    background: var(--grad); color: var(--white); overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .hero-visual::before, .hero-visual::after {
+    content: ""; position: absolute; border-radius: 50%; background: rgba(255,255,255,.12);
+  }
+  .hero-visual::before { width: 280px; height: 280px; top: -100px; right: -90px; }
+  .hero-visual::after { width: 200px; height: 200px; bottom: -80px; left: -60px; }
+  .tablet {
+    position: relative; z-index: 1; margin: 12px auto 0; width: 86%; max-width: 360px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35);
+    border-radius: 22px; padding: 18px; backdrop-filter: blur(6px);
+  }
+  .tablet-screen { background: var(--white); border-radius: 14px; padding: 16px; color: var(--ink); }
+  .tablet-screen .row { height: 10px; border-radius: 6px; background: var(--blue-soft); margin-bottom: 10px; }
+  .tablet-screen .row.short { width: 60%; }
+  .tablet-screen .row.purple { background: var(--purple-soft); }
+  .tablet-screen .doc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
+  .tablet-screen .doc-grid span { height: 46px; border-radius: 8px; background: var(--grad); opacity: .85; }
+  .tablet-screen .doc-grid span:nth-child(2) { opacity: .55; }
+  .tablet-screen .doc-grid span:nth-child(4) { opacity: .4; }
+  .floating-pill {
+    position: relative; z-index: 1; align-self: flex-end; background: var(--white); color: var(--purple-dark);
+    border-radius: 999px; padding: 8px 14px; font-size: .82rem; font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12); display: inline-flex; gap: 8px; align-items: center;
+  }
+  .floating-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+  .info-badge {
+    position: relative; z-index: 1; background: var(--white); color: var(--ink);
+    border-radius: 16px; padding: 16px 18px; display: flex; gap: 14px; align-items: center;
+    box-shadow: 0 12px 26px rgba(0,0,0,.15);
+  }
+  .info-badge .ico {
+    width: 42px; height: 42px; border-radius: 12px; background: var(--blue-soft); color: var(--blue);
+    display: grid; place-items: center; font-weight: 800; flex-shrink: 0;
+  }
+  .info-badge strong { display: block; font-size: .98rem; }
+  .info-badge small { color: var(--ink-soft); font-size: .8rem; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+  .about-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 32px;
+    box-shadow: var(--shadow);
+  }
+  .about-card .seal-row { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .seal {
+    width: 56px; height: 56px; border-radius: 16px; background: var(--grad); color: var(--white);
+    display: grid; place-items: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;
+  }
+  .about-card h3 { font-size: 1.3rem; margin-bottom: 4px; }
+  .about-card p { margin: 0; }
+  .sign-box {
+    margin-top: 24px; padding: 16px 18px; border-radius: 14px;
+    border: 1px dashed var(--purple); background: var(--purple-soft);
+  }
+  .sign-box small { display: block; color: var(--purple-dark); font-weight: 700; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+  .sign-box strong { display: block; color: var(--ink); font-size: 1.05rem; margin-top: 4px; }
+  .sign-box span { color: var(--ink-soft); font-size: .85rem; }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 32px 0 24px; }
+  .pillar {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 24px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .pillar:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+  .pillar .ico {
+    width: 44px; height: 44px; border-radius: 12px; background: var(--grad); color: var(--white);
+    display: grid; place-items: center; font-weight: 800; margin-bottom: 14px;
+  }
+  .pillar p { margin: 0; font-size: .95rem; }
+  .disclaimer {
+    display: flex; gap: 14px; padding: 20px 22px; border-radius: 16px;
+    background: var(--blue-soft); border-left: 4px solid var(--blue);
+  }
+  .disclaimer .ico { font-weight: 800; color: var(--blue-dark); }
+  .disclaimer p { margin: 0; color: var(--ink); font-size: .92rem; }
+
+  /* Services */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .service {
+    position: relative; display: flex; flex-direction: column;
+    background: var(--white); border: 1px solid var(--line); border-radius: 20px;
+    padding: 28px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .service:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: #c7d2fe; }
+  .service .num {
+    display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px;
+    border-radius: 14px; background: var(--blue-soft); color: var(--blue-dark); font-weight: 800; margin-bottom: 18px;
+  }
+  .service .kicker { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--purple); margin-bottom: 6px; }
+  .service h3 { font-size: 1.12rem; }
+  .service p { font-size: .94rem; flex: 1; }
+  .service .btn { align-self: flex-start; min-height: 40px; padding: 8px 14px; font-size: .9rem; margin-top: 8px; background: transparent; color: var(--blue); border-color: transparent; padding-left: 0; }
+  .service .btn:hover { color: var(--purple); }
+  .service.flagship {
+    background: var(--grad); border: none; color: var(--white);
+    box-shadow: 0 16px 36px rgba(124, 58, 237, 0.30);
+  }
+  .service.flagship h3, .service.flagship .kicker { color: var(--white); }
+  .service.flagship .kicker { opacity: .9; }
+  .service.flagship p { color: rgba(255,255,255,.92); }
+  .service.flagship .num { background: rgba(255,255,255,.2); color: var(--white); }
+  .service.flagship .btn { color: var(--white); }
+  .service.flagship .btn:hover { color: var(--white); text-decoration: underline; }
+  .service-wide { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 24px; padding: 26px 28px; }
+  .service-wide .num { margin-bottom: 0; flex-shrink: 0; }
+  .service-wide .body { flex: 1; }
+  .service-wide .btn { margin-top: 0; }
+  .services-footnote {
+    margin-top: 32px; padding: 18px 22px; border-radius: 16px; background: var(--purple-soft);
+    color: var(--purple-dark); font-size: .92rem; font-weight: 500;
+  }
+  .services-footnote strong { color: var(--purple-dark); }
+
+  /* Paperless highlight */
+  .paperless {
+    position: relative; overflow: hidden; border-radius: 28px; padding: 56px;
+    background: var(--grad); color: var(--white); box-shadow: 0 24px 50px rgba(30, 58, 138, .25);
+  }
+  .paperless::before { content: ""; position: absolute; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,.1); top: -120px; right: -100px; }
+  .paperless::after { content: ""; position: absolute; width: 240px; height: 240px; border-radius: 50%; background: rgba(255,255,255,.08); bottom: -100px; left: -80px; }
+  .paperless > * { position: relative; z-index: 1; }
+  .paperless .eyebrow { color: #e9d5ff; }
+  .paperless h2 { color: var(--white); max-width: 760px; }
+  .paperless p { color: rgba(255,255,255,.92); max-width: 760px; }
+  .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 36px 0; }
+  .benefit {
+    background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+    border-radius: 18px; padding: 24px; backdrop-filter: blur(6px);
+  }
+  .benefit .ico {
+    width: 40px; height: 40px; border-radius: 12px; background: var(--white); color: var(--purple-dark);
+    display: grid; place-items: center; font-weight: 800; margin-bottom: 14px;
+  }
+  .benefit h3 { color: var(--white); font-size: 1.05rem; }
+  .benefit p { color: rgba(255,255,255,.9); margin: 0; font-size: .93rem; }
+  .paperless-foot { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; }
+  .paperless-foot p { margin: 0; font-size: .92rem; color: rgba(255,255,255,.92); max-width: 560px; }
+  .paperless .btn-outline { border-color: var(--white); color: var(--white); background: transparent; }
+  .paperless .btn-outline:hover { background: rgba(255,255,255,.14); color: var(--white); }
+
+  /* Why choose us */
+  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .trust-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 28px;
+    box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .trust-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+  .trust-card .ico {
+    width: 48px; height: 48px; border-radius: 14px; background: var(--purple-soft); color: var(--purple-dark);
+    display: grid; place-items: center; font-weight: 800; margin-bottom: 18px;
+  }
+  .trust-card p { margin: 0; font-size: .95rem; }
+
+  /* How it works */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+  .step {
+    background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 26px;
+    box-shadow: var(--shadow); position: relative;
+  }
+  .step .step-no {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--grad); color: var(--white);
+    display: grid; place-items: center; font-weight: 800; margin-bottom: 16px;
+  }
+  .step h3 { font-size: 1.05rem; }
+  .step p { font-size: .93rem; margin-bottom: 14px; }
+  .step .tag {
+    display: inline-block; font-size: .75rem; font-weight: 700; color: var(--blue-dark);
+    background: var(--blue-soft); padding: 4px 10px; border-radius: 999px;
+  }
+  .workflow-note { margin-top: 28px; text-align: center; color: var(--ink-soft); font-size: .95rem; }
+
+  /* Enquiry form */
+  .enquiry { background: var(--bg-soft); }
+  .enquiry-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; align-items: start; }
+  .context-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 22px; padding: 28px;
+    box-shadow: var(--shadow); margin-bottom: 20px;
+  }
+  .context-card ul { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 12px; }
+  .context-card li { display: flex; gap: 12px; align-items: flex-start; color: var(--ink-soft); font-size: .95rem; }
+  .context-card li::before {
+    content: "✓"; width: 24px; height: 24px; border-radius: 50%; background: var(--purple-soft); color: var(--purple-dark);
+    display: grid; place-items: center; font-weight: 800; font-size: .8rem; flex-shrink: 0; margin-top: 1px;
+  }
+  .whatsapp-card {
+    background: var(--grad); color: var(--white); border-radius: 22px; padding: 26px; box-shadow: var(--shadow-hover);
+  }
+  .whatsapp-card h3 { color: var(--white); }
+  .whatsapp-card p { color: rgba(255,255,255,.92); }
+  .whatsapp-card .btn { background: var(--white); color: var(--purple-dark); box-shadow: none; margin-top: 8px; }
+  .whatsapp-card .btn:hover { color: var(--purple); }
+  .form-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 40px;
+    box-shadow: var(--shadow-hover);
+  }
+  .form-card header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 26px; }
+  .form-card h3 { font-size: 1.35rem; margin: 0; }
+  .form-card header p { margin: 4px 0 0; font-size: .92rem; }
+  .form-badge { background: var(--purple-soft); color: var(--purple-dark); font-size: .75rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+  .field { margin-bottom: 20px; }
+  .field > label, .field > .legend {
+    display: block; font-weight: 600; font-size: .92rem; color: var(--ink); margin-bottom: 8px;
+  }
+  .req { color: var(--danger); }
+  .input, .select, .textarea {
+    width: 100%; font: inherit; font-size: .98rem; color: var(--ink);
+    background: var(--white); border: 1.5px solid #cbd5e1; border-radius: 12px;
+    padding: 12px 14px; min-height: 48px; transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .input::placeholder, .textarea::placeholder { color: #94a3b8; }
+  .input:hover, .select:hover, .textarea:hover { border-color: #94a3b8; }
+  .input:focus, .select:focus, .textarea:focus {
+    outline: none; border-color: var(--purple); box-shadow: 0 0 0 4px rgba(124,58,237,.15);
+  }
+  .textarea { min-height: 110px; resize: vertical; }
+  .select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--blue) 50%), linear-gradient(135deg, var(--blue) 50%, transparent 50%); background-position: calc(100% - 20px) 55%, calc(100% - 14px) 55%; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 40px; }
+  .input[aria-invalid="true"], .select[aria-invalid="true"], .textarea[aria-invalid="true"] { border-color: var(--danger); box-shadow: 0 0 0 4px rgba(185,28,28,.10); }
+  .input:disabled, .select:disabled, .textarea:disabled { background: #f1f5f9; cursor: not-allowed; }
+  .error-text { display: none; color: var(--danger); font-size: .84rem; margin-top: 6px; }
+  .error-text.show { display: block; }
+  .hint { font-size: .8rem; color: var(--ink-soft); margin-top: 6px; }
+  .char-count { font-size: .78rem; color: var(--ink-soft); text-align: right; margin-top: 4px; }
+  .radio-group { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .radio-card {
+    position: relative; display: flex; align-items: center; gap: 10px; cursor: pointer;
+    border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 14px; min-height: 52px;
+    font-weight: 600; font-size: .95rem; color: var(--ink); background: var(--white);
+    transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .radio-card:hover { border-color: var(--blue); }
+  .radio-card input { position: absolute; opacity: 0; pointer-events: none; }
+  .radio-card .dot {
+    width: 18px; height: 18px; border-radius: 50%; border: 2px solid #94a3b8; flex-shrink: 0;
+    display: grid; place-items: center; transition: border-color .2s ease;
+  }
+  .radio-card .dot::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--purple); transform: scale(0); transition: transform .2s ease; }
+  .radio-card:has(input:checked) { border-color: var(--purple); background: var(--purple-soft); box-shadow: 0 0 0 3px rgba(124,58,237,.12); }
+  .radio-card:has(input:checked) .dot { border-color: var(--purple); }
+  .radio-card:has(input:checked) .dot::after { transform: scale(1); }
+  .radio-card:has(input:focus-visible) { outline: 3px solid var(--purple); outline-offset: 2px; }
+  .consent { display: flex; gap: 12px; align-items: flex-start; font-size: .9rem; color: var(--ink-soft); }
+  .consent input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--purple); flex-shrink: 0; cursor: pointer; }
+  .consent a { font-weight: 600; }
+  .submit-row { margin-top: 28px; }
+  .submit-btn { width: 100%; }
+  .spinner {
+    width: 18px; height: 18px; border: 3px solid rgba(255,255,255,.4); border-top-color: var(--white);
+    border-radius: 50%; animation: spin .8s linear infinite; display: none;
+  }
+  .submit-btn.loading .spinner { display: inline-block; }
+  .submit-btn.loading .label-text { opacity: .85; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .form-status {
+    display: none; margin-top: 18px; padding: 14px 16px; border-radius: 12px; font-size: .95rem; font-weight: 500;
+  }
+  .form-status.show { display: block; }
+  .form-status.success { background: #ecfdf5; color: var(--success); border: 1px solid #a7f3d0; }
+  .form-status.error { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+  .form-foot { margin-top: 16px; text-align: center; font-size: .85rem; color: var(--ink-soft); }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; align-items: stretch; }
+  .contact-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 32px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+  .contact-item .ico {
+    width: 44px; height: 44px; border-radius: 12px; background: var(--blue-soft); color: var(--blue-dark);
+    display: grid; place-items: center; font-weight: 800; flex-shrink: 0; font-size: .85rem;
+  }
+  .contact-item strong { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin-bottom: 2px; }
+  .contact-item a, .contact-item span { color: var(--ink); font-weight: 600; font-size: 1rem; word-break: break-word; }
+  .quick-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto; }
+  .quick-actions .btn { min-height: 46px; padding: 10px 14px; font-size: .92rem; }
+  .map-card {
+    border-radius: 24px; overflow: hidden; position: relative; min-height: 420px;
+    background: linear-gradient(160deg, var(--blue-soft), var(--purple-soft));
+    border: 1px solid var(--line); box-shadow: var(--shadow);
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 24px;
+  }
+  .map-card::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(29,78,216,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(29,78,216,.07) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+  .map-pin {
+    position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+    width: 58px; height: 58px; border-radius: 50% 50% 50% 0; background: var(--grad);
+    transform: translate(-50%, -50%) rotate(-45deg); box-shadow: 0 12px 24px rgba(124,58,237,.35);
+  }
+  .map-pin::after { content: ""; position: absolute; width: 18px; height: 18px; border-radius: 50%; background: var(--white); top: 20px; left: 20px; }
+  .map-info {
+    position: relative; z-index: 1; background: var(--white); border-radius: 16px; padding: 18px 20px;
+    box-shadow: var(--shadow); display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  }
+  .map-info p { margin: 0; font-size: .92rem; color: var(--ink); }
+  .map-info strong { color: var(--ink); }
+
+  /* Privacy & terms */
+  .legal { background: var(--white); }
+  .legal-wrap { max-width: 860px; margin: 0 auto; }
+  .legal article { margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
+  .legal article:last-child { border-bottom: 0; }
+  .legal h3 { color: var(--blue-dark); font-size: 1.15rem; margin-top: 8px; }
+  .legal ul { padding-left: 20px; color: var(--ink-soft); }
+  .legal li { margin-bottom: 8px; }
+  .legal .updated { font-size: .85rem; color: var(--ink-soft); }
+  .legal-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+
+  /* Footer */
+  .site-footer { background: #0b1b4a; color: #c7d2fe; padding: 64px 0 28px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; }
+  .site-footer h4 { color: var(--white); font-size: .95rem; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 16px; }
+  .site-footer p, .site-footer li { color: #c7d2fe; font-size: .92rem; }
+  .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .site-footer a { color: #c7d2fe; }
+  .site-footer a:hover { color: var(--white); }
+  .site-footer .brand { color: var(--white); }
+  .site-footer .brand-text small { color: #a5b4fc; }
+  .footer-bottom {
+    margin-top: 48px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12);
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: .85rem; color: #a5b4fc;
+  }
+  .footer-disclaimer { font-size: .8rem; color: #a5b4fc; margin-top: 16px; max-width: 560px; }
+
+  /* Floating WhatsApp */
+  .wa-float {
+    position: fixed; right: 18px; bottom: 18px; z-index: 60; width: 56px; height: 56px; border-radius: 50%;
+    background: var(--purple); color: var(--white); display: grid; place-items: center;
+    box-shadow: 0 12px 26px rgba(124,58,237,.35); font-weight: 800; font-size: .8rem;
+    transition: transform .2s ease;
+  }
+  .wa-float:hover { transform: scale(1.06); text-decoration: none; color: var(--white); }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* Responsive */
+  @media (max-width: 1080px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column; align-items: stretch; position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--white); padding: 12px 24px 20px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow);
+    }
+    .nav-links.open a { padding: 12px 14px; font-size: 1rem; }
+    .nav-cta .btn { display: none; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual { min-height: 400px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .enquiry-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 860px) {
+    .section { padding: 68px 0; }
+    .paperless { padding: 40px 32px; }
+    .benefits { grid-template-columns: 1fr; }
+    .service-wide { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 680px) {
+    .container { padding: 0 18px; }
+    .ribbon .container { justify-content: center; text-align: center; }
+    .ribbon span:nth-child(n+3) { display: none; }
+    .brand-text small { display: none; }
+    .stats { grid-template-columns: 1fr; }
+    .services-grid, .trust-grid, .steps { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr; }
+    .form-card { padding: 26px 20px; }
+    .radio-group { grid-template-columns: 1fr; }
+    .quick-actions { grid-template-columns: 1fr; }
+    .map-card { min-height: 340px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero { padding: 48px 0 56px; }
+    .hero-ctas .btn { width: 100%; }
+    .context-card, .about-card, .contact-card { padding: 24px; }
+    .paperless { padding: 32px 22px; border-radius: 22px; }
+  }
+  @media (max-width: 380px) {
+    .brand-text { font-size: .92rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="sr-only" href="#main">Skip to main content</a>
+
+<!-- Top trust ribbon -->
+<div class="ribbon" role="region" aria-label="Business information">
+  <div class="container">
+    <span>Office hours: 9:00 AM – 8:00 PM</span>
+    <span>Marakkanam, Viluppuram District, Tamil Nadu</span>
+    <span>Phone / WhatsApp: <a href="tel:+919092049885">+91 9092049885</a></span>
+  </div>
+</div>
+
+<!-- Header / navigation -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Rajendran's Consultancy home">
+      <span class="brand-mark" aria-hidden="true">RC</span>
+      <span class="brand-text">Rajendran's Consultancy<small>Documentation &amp; Consultancy</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#paperless">Paperless</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#enquiry">Enquiry</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#enquiry">Make an Enquiry</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Section 1: Hero -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <span class="hero-glow one" aria-hidden="true"></span>
+  <span class="hero-glow two" aria-hidden="true"></span>
+  <div class="container hero-grid">
+    <div>
+      <span class="pill">Documentation support in Marakkanam</span>
+      <h1 id="hero-title">Your Trusted Partner for <span>Documentation &amp; Consultancy</span></h1>
+      <p class="hero-lead">Professional assistance with property documentation, registration-related procedures, government documentation support, and structured paperless-work advisory in Marakkanam, Viluppuram District.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-link-arrow" href="#enquiry">Submit an Enquiry</a>
+        <a class="btn btn-outline" href="tel:+919092049885">Call +91 9092049885</a>
+        <a class="btn btn-ghost" href="https://wa.me/919092049885" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+      <div class="stats" role="list">
+        <div class="stat" role="listitem"><strong>20+ Years</strong><small>Tamil Nadu registry depth</small></div>
+        <div class="stat" role="listitem"><strong>4,500+</strong><small>Clients guided successfully</small></div>
+        <div class="stat" role="listitem"><strong>100%</strong><small>Transparent procedural audits</small></div>
+      </div>
+    </div>
+    <div class="hero-visual" role="img" aria-label="Illustration of a documentation workspace with a digital tablet">
+      <span class="floating-pill">Digital workflow ready</span>
+      <div class="tablet" aria-hidden="true">
+        <div class="tablet-screen">
+          <div class="row"></div>
+          <div class="row short purple"></div>
+          <div class="row"></div>
+          <div class="doc-grid"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="info-badge">
+        <span class="ico" aria-hidden="true">✓</span>
+        <div>
+          <strong>Structured documentation</strong>
+          <small>Title deeds, layouts and registry records, organised step by step</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: About Us -->
+<section class="section section-alt" id="about" aria-labelledby="about-title">
+  <div class="container about-grid">
+    <div>
+      <div class="about-card reveal">
+        <div class="seal-row">
+          <span class="seal" aria-hidden="true">SK</span>
+          <div>
+            <h3>Rajendran's Consultancy</h3>
+            <p>Contact person: S. Kathirvel</p>
+          </div>
+        </div>
+        <p>Founded to bring order, transparency, and dependable procedural guidance to land, property, and administrative paperwork across Tamil Nadu.</p>
+        <div class="sign-box">
+          <small>Proprietor</small>
+          <strong>S. Kathirvel</strong>
+          <span>No. 76, Melaveethi, Marakkanam, Tamil Nadu</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">About our practice</span>
+      <h2 id="about-title">Decades of Procedural Rigour in Tamil Nadu Land &amp; Statutory Systems</h2>
+      <p>With over 20 years of experience and more than 4,500 clients served, we help individuals, agriculturalists and businesses handle property and administrative paperwork with clarity. We focus on accurate preparation, clear communication and realistic expectations at every stage.</p>
+      <p>We are a documentation and consultancy practice. Where a legal opinion or a formal sign-off is needed, we coordinate with a qualified advocate.</p>
+      <div class="pillars">
+        <article class="pillar reveal">
+          <span class="ico" aria-hidden="true">P</span>
+          <h3>Personalised Guidance</h3>
+          <p>No one-size-fits-all scripts. Every property or municipal docket is individually assessed based on local village records.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="ico" aria-hidden="true">C</span>
+          <h3>Clear Communication</h3>
+          <p>Total clarity on required stamps, processing fees, expected departmental timelines, and documentation prerequisites.</p>
+        </article>
+      </div>
+      <div class="disclaimer reveal" role="note">
+        <span class="ico" aria-hidden="true">!</span>
+        <p><strong>Statutory disclaimer:</strong> We provide documentation and procedural support only. We do not guarantee government approvals, registration outcomes or processing times. Final decisions rest with the concerned government authority.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Services -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our services</span>
+      <h2 id="services-title">10 Services Designed for Clear, Structured Paperwork</h2>
+      <p>From property records to registration coordination, each service is handled with careful preparation and a transparent process.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service reveal" id="svc-1">
+        <span class="num" aria-hidden="true">01</span>
+        <span class="kicker">Service 01</span>
+        <h3>Property Documentation Support</h3>
+        <p>Assistance with preparing, compiling, and organising property-related records, antecedent deeds, parent documents, and understanding the complete documentation process.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Property Documentation Support">Enquire about this</a>
+      </article>
+
+      <article class="service reveal" id="svc-2">
+        <span class="num" aria-hidden="true">02</span>
+        <span class="kicker">Service 02</span>
+        <h3>Sale Deed Drafting Support</h3>
+        <p>Assistance with preparing accurate sale deed drafts, settlement deeds, gift covenants, and coordinating advocate review where legal sign-off is required.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Sale Deed Drafting Support">Enquire about this</a>
+      </article>
+
+      <article class="service reveal" id="svc-3">
+        <span class="num" aria-hidden="true">03</span>
+        <span class="kicker">Service 03</span>
+        <h3>Patta &amp; Chitta Assistance</h3>
+        <p>Step-by-step guidance with documentation and revenue administrative procedures relating to Patta transfers, joint Patta subdivisions, and Chitta extract verifications.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Patta & Chitta Assistance">Enquire about this</a>
+      </article>
+
+      <article class="service reveal" id="svc-4">
+        <span class="num" aria-hidden="true">04</span>
+        <span class="kicker">Service 04</span>
+        <h3>Registration Office Coordination</h3>
+        <p>Assistance with understanding sub-registrar procedures, organising required paperwork checklists, token slot bookings, and coordinating smooth in-person visits.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Registration Office Coordination">Enquire about this</a>
+      </article>
+
+      <article class="service reveal" id="svc-5">
+        <span class="num" aria-hidden="true">05</span>
+        <span class="kicker">Service 05</span>
+        <h3>Municipal Approval Documentation</h3>
+        <p>Support with documentation and administrative paperwork for town panchayat and municipal planning submissions. Final approval decisions remain strictly with the civic authority.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Municipal Approval Documentation">Enquire about this</a>
+      </article>
+
+      <article class="service reveal" id="svc-6">
+        <span class="num" aria-hidden="true">06</span>
+        <span class="kicker">Service 06</span>
+        <h3>Government Documentation Assistance</h3>
+        <p>Help with preparing, organising, verifying, and submitting applicable citizen documents across revenue, civil supplies, and local administrative windows.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Government Documentation Assistance">Enquire about this</a>
+      </article>
+
+      <article class="service flagship reveal" id="svc-7">
+        <span class="num" aria-hidden="true">07</span>
+        <span class="kicker">Service 07 • Flagship</span>
+        <h3>Paperless Work Consultation</h3>
+        <p>Strategic consultation on reducing cumbersome paper files, setting up cloud records, understanding e-services, and transitioning to digital statutory portals.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Paperless Work Consultation">Enquire about this</a>
+      </article>
+
+      <article class="service reveal" id="svc-8">
+        <span class="num" aria-hidden="true">08</span>
+        <span class="kicker">Service 08</span>
+        <h3>Printing &amp; Documentation Services</h3>
+        <p>High-precision printing, binding, indexing, and organising document sets to meet stringent sub-registrar specifications and archive standards.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Printing & Documentation Services">Enquire about this</a>
+      </article>
+
+      <article class="service reveal" id="svc-9">
+        <span class="num" aria-hidden="true">09</span>
+        <span class="kicker">Service 09</span>
+        <h3>Notarisation &amp; Stamping Coordination</h3>
+        <p>Assistance with determining correct non-judicial stamp duty values and coordinating notary attestation through registered, authorised professionals.</p>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Notarisation & Stamping Coordination">Enquire about this</a>
+      </article>
+
+      <article class="service service-wide reveal" id="svc-10">
+        <span class="num" aria-hidden="true">10</span>
+        <div class="body">
+          <span class="kicker">Service 10</span>
+          <h3>Advocate Review Coordination</h3>
+          <p>Coordination with a qualified advocate for review of documents where legal sign-off is required. We arrange the review; the advocate provides the legal opinion.</p>
+        </div>
+        <a class="btn btn-link-arrow" href="#enquiry" data-service="Advocate Review Coordination">Enquire about this</a>
+      </article>
+    </div>
+
+    <p class="services-footnote"><strong>Statutory compliance footnote:</strong> Processing times, fees and approvals depend on the concerned government department. We support the documentation process but do not guarantee approval outcomes.</p>
+  </div>
+</section>
+
+<!-- Section 4: Paperless work highlight -->
+<section class="section section-alt" id="paperless" aria-labelledby="paperless-title">
+  <div class="container">
+    <div class="paperless reveal">
+      <span class="eyebrow">Paperless Work Consultation</span>
+      <h2 id="paperless-title">Move Towards Smarter, Paperless Documentation</h2>
+      <p>Eliminate storage hazards, lost title antecedents, and disorganised receipts. We guide individuals, agriculturalists, and businesses to transition into structured, authenticated digital documentation workflows.</p>
+      <div class="benefits">
+        <article class="benefit">
+          <span class="ico" aria-hidden="true">1</span>
+          <h3>Safer Storage</h3>
+          <p>Reduce the risk of damaged, misplaced or lost original records through organised digital copies.</p>
+        </article>
+        <article class="benefit">
+          <span class="ico" aria-hidden="true">2</span>
+          <h3>Organised Records</h3>
+          <p>Keep title antecedents and receipts indexed in a structure that is easy to find and share.</p>
+        </article>
+        <article class="benefit">
+          <span class="ico" aria-hidden="true">3</span>
+          <h3>Digital Portals</h3>
+          <p>Understand how to use statutory e-services and transition to digital submission workflows.</p>
+        </article>
+      </div>
+      <div class="paperless-foot">
+        <p><strong>Practical guidance note:</strong> Digital copies support your records but may not replace originals where a department requires them. We will confirm the requirement for your case.</p>
+        <a class="btn btn-outline" href="#enquiry" data-service="Paperless Work Consultation">Book a Paperless Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Why choose us -->
+<section class="section" id="why-us" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+      <span class="eyebrow">Why choose us</span>
+      <h2 id="why-title">A Careful, Transparent Way to Handle Your Paperwork</h2>
+      <p>Built on experience, clear communication and honest expectations.</p>
+    </div>
+    <div class="trust-grid">
+      <article class="trust-card reveal">
+        <span class="ico" aria-hidden="true">20+</span>
+        <h3>Over 20 Years of Experience</h3>
+        <p>Two decades working with land, property and administrative paperwork across Tamil Nadu.</p>
+      </article>
+      <article class="trust-card reveal">
+        <span class="ico" aria-hidden="true">4.5k</span>
+        <h3>More Than 4,500 Clients</h3>
+        <p>Individuals, agriculturalists and businesses guided through their documentation needs.</p>
+      </article>
+      <article class="trust-card reveal">
+        <span class="ico" aria-hidden="true">✓</span>
+        <h3>Transparent Procedures</h3>
+        <p>We explain required stamps, fees, departmental timelines and prerequisites before work begins.</p>
+      </article>
+      <article class="trust-card reveal">
+        <span class="ico" aria-hidden="true">□</span>
+        <h3>Structured Checklists</h3>
+        <p>Every file is prepared against a documented checklist so nothing important is missed.</p>
+      </article>
+      <article class="trust-card reveal">
+        <span class="ico" aria-hidden="true">⚖</span>
+        <h3>Advocate Coordination</h3>
+        <p>Where legal review is needed, we coordinate with a qualified advocate rather than offering legal opinions ourselves.</p>
+      </article>
+      <article class="trust-card reveal">
+        <span class="ico" aria-hidden="true">★</span>
+        <h3>Personal Attention</h3>
+        <p>Direct contact with S. Kathirvel for each enquiry, from first call to final paperwork.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: How it works -->
+<section class="section section-alt" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Procedural workflow</span>
+      <h2 id="process-title">How Our Consultation Flow Operates</h2>
+      <p>A straightforward, four-stage protocol designed to eliminate administrative confusion and save your valuable time.</p>
+    </div>
+    <div class="steps">
+      <article class="step reveal">
+        <div class="step-no" aria-hidden="true">1</div>
+        <h3>Contact Us</h3>
+        <p>Submit an online enquiry below or reach out directly via Phone / WhatsApp at +91 9092049885.</p>
+        <span class="tag">Immediate acknowledgment</span>
+      </article>
+      <article class="step reveal">
+        <div class="step-no" aria-hidden="true">2</div>
+        <h3>Discuss Requirements</h3>
+        <p>Explain your specific land, deed drafting, municipal approval, or paperless advisory need in detail.</p>
+        <span class="tag">1-on-1 file intake</span>
+      </article>
+      <article class="step reveal">
+        <div class="step-no" aria-hidden="true">3</div>
+        <h3>Receive Guidance</h3>
+        <p>Receive a thorough breakdown of required certificates, stamp duty estimates, roadmap, and timelines.</p>
+        <span class="tag">Clear roadmap shared</span>
+      </article>
+      <article class="step reveal">
+        <div class="step-no" aria-hidden="true">4</div>
+        <h3>Proceed with Assistance</h3>
+        <p>We assist with meticulous document preparation, scheduling, digital scans, and in-person office coordination.</p>
+        <span class="tag">Structured execution</span>
+      </article>
+    </div>
+    <p class="workflow-note">Timelines depend on the concerned department. We will share realistic estimates once we have reviewed your documents.</p>
+  </div>
+</section>
+
+<!-- Section 7: Enquiry & appointment request -->
+<section class="section enquiry" id="enquiry" aria-labelledby="enquiry-title">
+  <div class="container enquiry-grid">
+    <div>
+      <div class="context-card reveal">
+        <span class="eyebrow">Client enquiry &amp; appointment booking</span>
+        <h2 id="enquiry-title" style="font-size:clamp(1.5rem,2.6vw,2.1rem)">Tell Us What You Need</h2>
+        <p>Share a few details and we will get back to you to confirm the next step. Appointment requests are requests only; we will confirm availability by phone or WhatsApp.</p>
+        <ul>
+          <li>Requests are reviewed during working hours, 9:00 AM – 8:00 PM</li>
+          <li>Please do not send Aadhaar, title deeds or other original documents through this form</li>
+          <li>Submitting this form does not confirm an appointment or any government outcome</li>
+        </ul>
+      </div>
+      <div class="whatsapp-card reveal">
+        <h3>Prefer instant messaging?</h3>
+        <p>You can message S. Kathirvel directly on WhatsApp for expedited responses during working hours (9:00 AM – 8:00 PM).</p>
+        <a class="btn" href="https://wa.me/919092049885" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="form-card reveal">
+      <header>
+        <div>
+          <h3>Enquiry form</h3>
+          <p>Fields marked <span class="req" aria-hidden="true">*</span> are required.</p>
+        </div>
+        <span class="form-badge">Response within working hours</span>
+      </header>
+
+      <form id="enquiryForm" novalidate>
+        <fieldset class="field" style="border:0;padding:0;margin:0 0 20px;">
+          <legend class="legend" style="padding:0;">Type of enquiry <span class="req" aria-hidden="true">*</span></legend>
+          <div class="radio-group">
+            <label class="radio-card">
+              <input type="radio" name="enquiryType" value="Enquiry" checked>
+              <span class="dot" aria-hidden="true"></span>
+              <span>General enquiry</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="enquiryType" value="Appointment Request">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Appointment request</span>
+            </label>
+          </div>
+          <p class="error-text" id="enquiryTypeError">Please select an enquiry type.</p>
+        </fieldset>
+
+        <div class="field">
+          <label for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="text" id="fullName" name="name" placeholder="e.g., M. Rajasekar" autocomplete="name" required aria-describedby="nameError" maxlength="100">
+          <p class="error-text" id="nameError">Please enter your full name (at least 2 characters).</p>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number (+91) <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="tel" id="phone" name="phone" placeholder="e.g., 9092049885" inputmode="numeric" autocomplete="tel-national" required aria-describedby="phoneHint phoneError" maxlength="14">
+          <p class="hint" id="phoneHint">10-digit mobile number. We will contact you on this number.</p>
+          <p class="error-text" id="phoneError">Please enter a valid 10-digit Indian mobile number.</p>
+        </div>
+
+        <div class="field">
+          <label for="service">Service required <span class="req" aria-hidden="true">*</span></label>
+          <select class="select" id="service" name="service" required aria-describedby="serviceError">
+            <option value="">Select a service</option>
+            <option>Property Documentation Support</option>
+            <option>Sale Deed Drafting Support</option>
+            <option>Patta &amp; Chitta Assistance</option>
+            <option>Registration Office Coordination</option>
+            <option>Municipal Approval Documentation</option>
+            <option>Government Documentation Assistance</option>
+            <option>Paperless Work Consultation</option>
+            <option>Printing &amp; Documentation Services</option>
+            <option>Notarisation &amp; Stamping Coordination</option>
+            <option>Advocate Review Coordination</option>
+            <option>General Consultation</option>
+          </select>
+          <p class="error-text" id="serviceError">Please choose a service.</p>
+        </div>
+
+        <div class="field">
+          <label for="message">Brief notes on documentation / parcel details</label>
+          <textarea class="textarea" id="message" name="message" placeholder="Briefly mention survey number, document type, or specific question..." maxlength="500" aria-describedby="messageCount"></textarea>
+          <div class="char-count" id="messageCount" aria-live="polite">0 / 500</div>
+        </div>
+
+        <div class="field">
+          <label class="consent">
+            <input type="checkbox" id="consent" name="consent" required aria-describedby="consentError">
+            <span>I agree to the <a href="#privacy">Privacy Policy</a> and <a href="#terms">Terms &amp; Conditions</a>, and consent to being contacted about my enquiry. <span class="req" aria-hidden="true">*</span></span>
+          </label>
+          <p class="error-text" id="consentError">Please accept the Privacy Policy and Terms to continue.</p>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="label-text">Submit enquiry</span>
+          </button>
+        </div>
+
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        <p class="form-foot">Submitting this form is not a confirmed appointment. We will contact you to confirm.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: Contact -->
+<section class="section section-alt" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Office &amp; directions</span>
+      <h2 id="contact-title">Get in Touch with S. Kathirvel</h2>
+      <p>Visit our office on Melaveethi or reach out via our verified channels.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="contact-item">
+          <span class="ico" aria-hidden="true">KS</span>
+          <div><strong>Contact person</strong><span>S. Kathirvel</span></div>
+        </div>
+        <div class="contact-item">
+          <span class="ico" aria-hidden="true">PH</span>
+          <div><strong>Phone / WhatsApp</strong><a href="tel:+919092049885">+91 9092049885</a></div>
+        </div>
+        <div class="contact-item">
+          <span class="ico" aria-hidden="true">@</span>
+          <div><strong>Email</strong><a href="mailto:skathirvel19@gmail.com">skathirvel19@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <span class="ico" aria-hidden="true">AD</span>
+          <div><strong>Address</strong><span>No. 76, Melaveethi, Marakkanam, Tamil Nadu</span></div>
+        </div>
+        <div class="contact-item">
+          <span class="ico" aria-hidden="true">HR</span>
+          <div><strong>Business hours</strong><span>9:00 AM – 8:00 PM</span></div>
+        </div>
+        <div class="quick-actions">
+          <a class="btn btn-primary" href="tel:+919092049885">Call Now</a>
+          <a class="btn btn-outline" href="https://wa.me/919092049885" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="map-card reveal" role="region" aria-label="Office location">
+        <span class="map-pin" aria-hidden="true"></span>
+        <div class="map-info">
+          <p><strong>Rajendran's Consultancy</strong><br>No. 76, Melaveethi, Marakkanam, Tamil Nadu</p>
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Rajendran%27s+Consultancy+Melaveethi+Marakkanam" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: Privacy Policy & Terms -->
+<section class="section legal" id="legal" aria-labelledby="legal-title">
+  <div class="container">
+    <div class="legal-wrap">
+      <div class="section-head" style="margin-bottom:28px;">
+        <span class="eyebrow">Legal information</span>
+        <h2 id="legal-title">Privacy Policy &amp; Terms</h2>
+        <p class="updated">Last updated: October 2026</p>
+      </div>
+      <nav class="legal-tabs" aria-label="Legal sections">
+        <a class="btn btn-outline" href="#privacy">Privacy Policy</a>
+        <a class="btn btn-outline" href="#terms">Terms &amp; Conditions</a>
+      </nav>
+
+      <article id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title" style="font-size:1.6rem;">Privacy Policy</h2>
+        <h3>1. Information we collect</h3>
+        <p>When you submit an enquiry or appointment request, we collect your name, phone number, the type of enquiry, the service you need, and any brief notes you choose to add.</p>
+        <h3>2. How we use your information</h3>
+        <ul>
+          <li>To respond to your enquiry and call or message you on the number provided.</li>
+          <li>To prepare a documentation checklist and a service roadmap for you.</li>
+          <li>To keep basic records of enquiries for service quality.</li>
+        </ul>
+        <h3>3. Contact and appointment requests</h3>
+        <p>An appointment request is not a confirmed booking. We will confirm the time with you directly. Please do not send original documents, Aadhaar copies or sensitive identity details through this website.</p>
+        <h3>4. Sharing</h3>
+        <p>We do not sell your information. Information is shared only where needed to respond to your enquiry, or where required by law.</p>
+        <h3>5. Your privacy concerns</h3>
+        <p>To ask about your data or to request correction or deletion, contact S. Kathirvel at <a href="mailto:skathirvel19@gmail.com">skathirvel19@gmail.com</a> or on <a href="tel:+919092049885">+91 9092049885</a>.</p>
+      </article>
+
+      <article id="terms" aria-labelledby="terms-title">
+        <h2 id="terms-title" style="font-size:1.6rem;">Terms &amp; Conditions</h2>
+        <h3>1. Scope of service</h3>
+        <p>Rajendran's Consultancy provides documentation and consultancy support, including property documentation, sale deed drafting support, Patta and Chitta assistance, registration office coordination, municipal approval documentation, government documentation assistance, paperless work consultation, printing and documentation services, notarisation and stamping coordination, and advocate review coordination.</p>
+        <h3>2. No guarantee of approvals or timelines</h3>
+        <p>Government approvals, registration outcomes, processing fees and processing times are decided by the concerned authority. We do not guarantee any approval, outcome or timeline.</p>
+        <h3>3. Advocate review</h3>
+        <p>Where legal opinion or sign-off is required, we coordinate with a qualified advocate. We do not provide legal advice ourselves.</p>
+        <h3>4. Enquiries and appointments</h3>
+        <p>Submitting the enquiry form does not create a binding appointment or service contract. We will confirm the next step with you directly.</p>
+        <h3>5. Information you provide</h3>
+        <p>You are responsible for the accuracy of the information and documents you provide. Please keep original documents with you unless we agree otherwise in writing.</p>
+        <h3>6. Limitation</h3>
+        <p>This website is provided for information and enquiries. Nothing on it is a substitute for professional legal advice for your specific situation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">RC</span>
+          <span class="brand-text">Rajendran's Consultancy<small>Documentation &amp; Consultancy</small></span>
+        </a>
+        <p class="footer-disclaimer">Documentation and consultancy support only. We do not guarantee government approvals, registration outcomes or processing times.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Property Documentation</a></li>
+          <li><a href="#services">Sale Deed Drafting</a></li>
+          <li><a href="#services">Patta &amp; Chitta</a></li>
+          <li><a href="#services">Registration Coordination</a></li>
+          <li><a href="#paperless">Paperless Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#enquiry">Enquiry Form</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919092049885">+91 9092049885</a></li>
+          <li><a href="mailto:skathirvel19@gmail.com">skathirvel19@gmail.com</a></li>
+          <li>No. 76, Melaveethi, Marakkanam, Tamil Nadu</li>
+          <li>9:00 AM – 8:00 PM</li>
+          <li><a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Rajendran's Consultancy. All rights reserved.</span>
+      <span>Contact person: S. Kathirvel</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919092049885" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WA</a>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Config ---------- */
+  // Deployed Google Apps Script web app URL
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwnTZbMPCDZEcoYRf5m-4rN5dgih9wNJvV8FoEKxr8HpYoy2ETyuLQk73pNN5KckPj4TA/exec";
+
+  /* ---------- Mobile navigation ---------- */
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  function setNav(open) {
+    navLinks.classList.toggle("open", open);
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+
+  navToggle.addEventListener("click", function () {
+    setNav(!navLinks.classList.contains("open"));
+  });
+
+  navLinks.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { setNav(false); });
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setNav(false);
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) setNav(false);
+  });
+
+  /* ---------- Active nav link on scroll ---------- */
+  const sectionIds = ["about", "services", "paperless", "why-us", "process", "enquiry", "contact"];
+  const navAnchors = {};
+  navLinks.querySelectorAll("a").forEach(function (a) {
+    navAnchors[a.getAttribute("href").slice(1)] = a;
+  });
+
+  if ("IntersectionObserver" in window) {
+    const activeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          Object.values(navAnchors).forEach(function (a) { a.classList.remove("active"); });
+          const link = navAnchors[entry.target.id];
+          if (link) link.classList.add("active");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+
+    sectionIds.forEach(function (id) {
+      const el = document.getElementById(id);
+      if (el) activeObserver.observe(el);
+    });
+
+    /* Reveal-on-scroll */
+    const revealObserver = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---------- Service buttons pre-fill the service dropdown ---------- */
+  const serviceSelect = document.getElementById("service");
+  document.querySelectorAll("[data-service]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const name = btn.getAttribute("data-service");
+      const match = Array.from(serviceSelect.options).find(function (opt) {
+        return opt.value === name || opt.textContent.trim() === name;
+      });
+      if (match) {
+        serviceSelect.value = match.value;
+        clearError(serviceSelect, "serviceError");
+      }
+    });
+  });
+
+  /* ---------- Form ---------- */
+  const form = document.getElementById("enquiryForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const formStatus = document.getElementById("formStatus");
+  const nameInput = document.getElementById("fullName");
+  const phoneInput = document.getElementById("phone");
+  const messageInput = document.getElementById("message");
+  const messageCount = document.getElementById("messageCount");
+  const consentInput = document.getElementById("consent");
+
+  /* Live character counter */
+  function updateCount() {
+    messageCount.textContent = messageInput.value.length + " / 500";
+  }
+  messageInput.addEventListener("input", updateCount);
+  updateCount();
+
+  /* Phone: keep digits only, allow a leading +91 or 0 to be typed and normalised on submit */
+  phoneInput.addEventListener("input", function () {
+    const cleaned = phoneInput.value.replace(/[^\d+\s-]/g, "");
+    if (cleaned !== phoneInput.value) phoneInput.value = cleaned;
+  });
+
+  function showError(input, errorId) {
+    input.setAttribute("aria-invalid", "true");
+    document.getElementById(errorId).classList.add("show");
+  }
+
+  function clearError(input, errorId) {
+    input.removeAttribute("aria-invalid");
+    document.getElementById(errorId).classList.remove("show");
+  }
+
+  function normalisePhone(raw) {
+    let digits = String(raw).replace(/\D/g, "");
+    if (digits.length === 12 && digits.startsWith("91")) digits = digits.slice(2);
+    if (digits.length === 11 && digits.startsWith("0")) digits = digits.slice(1);
+    return digits;
+  }
+
+  function validate() {
+    let valid = true;
+    let firstInvalid = null;
+
+    const name = nameInput.value.trim();
+    if (name.length < 2) {
+      showError(nameInput, "nameError");
+      valid = false;
+      firstInvalid = firstInvalid || nameInput;
+    } else {
+      clearError(nameInput, "nameError");
+    }
+
+    const phone = normalisePhone(phoneInput.value);
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+      showError(phoneInput, "phoneError");
+      valid = false;
+      firstInvalid = firstInvalid || phoneInput.id && phoneInput;
+    } else {
+      clearError(phoneInput, "phoneError");
+    }
+
+    if (!serviceSelect.value) {
+      showError(serviceSelect, "serviceError");
+      valid = false;
+      firstInvalid = firstInvalid || serviceSelect;
+    } else {
+      clearError(serviceSelect, "serviceError");
+    }
+
+    if (!consentInput.checked) {
+      showError(consentInput, "consentError");
+      valid = false;
+      firstInvalid = firstInvalid || consentInput;
+    } else {
+      clearError(consentInput, "consentError");
+    }
+
+    const enquiryChecked = form.querySelector('input[name="enquiryType"]:checked');
+    if (!enquiryChecked) {
+      document.getElementById("enquiryTypeError").classList.add("show");
+      valid = false;
+    } else {
+      document.getElementById("enquiryTypeError").classList.remove("show");
+    }
+
+    if (firstInvalid) firstInvalid.focus();
+    return valid;
+  }
+
+  /* Clear errors while typing / changing */
+  nameInput.addEventListener("input", function () {
+    if (nameInput.value.trim().length >= 2) clearError(nameInput, "nameError");
+  });
+  phoneInput.addEventListener("input", function () {
+    if (/^[6-9]\d{9}$/.test(normalisePhone(phoneInput.value))) clearError(phoneInput, "phoneError");
+  });
+  serviceSelect.addEventListener("change", function () {
+    if (serviceSelect.value) clearError(serviceSelect, "serviceError");
+  });
+  consentInput.addEventListener("change", function () {
+    if (consentInput.checked) clearError(consentInput, "consentError");
+  });
+  form.querySelectorAll('input[name="enquiryType"]').forEach(function (r) {
+    r.addEventListener("change", function () {
+      document.getElementById("enquiryTypeError").classList.remove("show");
+    });
+  });
+
+  function setLoading(isLoading) {
+    submitBtn.disabled = isLoading;
+    submitBtn.classList.toggle("loading", isLoading);
+    submitBtn.querySelector(".label-text").textContent = isLoading ? "Sending…" : "Submit enquiry";
+    submitBtn.setAttribute("aria-busy", String(isLoading));
+  }
+
+  function showSuccess() {
+    formStatus.className = "form-status show success";
+    formStatus.textContent = "Your request has been sent. We will contact you to confirm.";
+    form.reset();
+    updateCount();
+  }
+
+  function showError2() {
+    formStatus.className = "form-status show error";
+    formStatus.textContent = "Something went wrong while sending your request. Please try again, or call or WhatsApp +91 9092049885.";
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    formStatus.className = "form-status";
+    formStatus.textContent = "";
+
+    if (!validate()) {
+      formStatus.className = "form-status show error";
+      formStatus.textContent = "Please correct the highlighted fields and try again.";
+      return;
+    }
+
+    const enquiryType = form.querySelector('input[name="enquiryType"]:checked').value;
+    const params = new URLSearchParams({
+      name: nameInput.value.trim(),
+      phone: normalisePhone(phoneInput.value),
+      enquiryType: enquiryType,
+      service: serviceSelect.value,
+      message: messageInput.value.trim()
+    });
+
+    const url = SCRIPT_URL + "?" + params.toString();
+
+    setLoading(true);
+
+    fetch(url, {
+      method: "GET",
+      mode: "no-cors"
+    })
+      .then(function () { showSuccess(); })
+      .catch(function () { showError2(); })
+      .finally(function () { setLoading(false); });
+  });
+
+  /* ---------- Footer year ---------- */
+  document.querySelectorAll(".footer-bottom span:first-child").forEach(function (el) {
+    el.textContent = "© " + new Date().getFullYear() + " Rajendran's Consultancy. All rights reserved.";
+  });
+})();
+</script>
+</body>
+</html>
