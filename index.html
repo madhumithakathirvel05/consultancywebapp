@@ -504,6 +504,16 @@
   }
   .footer-disclaimer { font-size: .8rem; color: #a5b4fc; margin-top: 16px; max-width: 560px; }
 
+  /* Site map */
+  .footer-sitemap { margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.12); }
+  .sitemap-list, .sitemap-list ul { list-style: none; padding: 0; margin: 0; }
+  .sitemap-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px 24px; }
+  .sitemap-list > li > a { font-weight: 700; color: #e0e7ff; }
+  .sitemap-list ul { margin-top: 6px; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.15); display: grid; gap: 6px; }
+  .sitemap-list a { color: #c7d2fe; font-size: .9rem; }
+  .sitemap-list a:hover { color: #fff; }
+  .sitemap-list ul a { font-size: .85rem; color: #a5b4fc; }
+
   /* Floating WhatsApp */
   .wa-float {
     position: fixed; right: 18px; bottom: 18px; z-index: 60; width: 56px; height: 56px; border-radius: 50%;
@@ -1157,6 +1167,38 @@
         </ul>
       </div>
     </div>
+
+    <!-- Site map -->
+    <nav class="footer-sitemap" aria-label="Site map">
+      <h4>Site Map</h4>
+      <ul class="sitemap-list">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li>
+          <a href="#services">Services</a>
+          <ul>
+            <li><a href="#svc-1">Property Documentation Support</a></li>
+            <li><a href="#svc-2">Sale Deed Drafting Support</a></li>
+            <li><a href="#svc-3">Patta &amp; Chitta Assistance</a></li>
+            <li><a href="#svc-4">Registration Office Coordination</a></li>
+            <li><a href="#svc-5">Municipal Approval Documentation</a></li>
+            <li><a href="#svc-6">Government Documentation Assistance</a></li>
+            <li><a href="#svc-7">Paperless Work Consultation</a></li>
+            <li><a href="#svc-8">Printing &amp; Documentation Services</a></li>
+            <li><a href="#svc-9">Notarisation &amp; Stamping Coordination</a></li>
+            <li><a href="#svc-10">Advocate Review Coordination</a></li>
+          </ul>
+        </li>
+        <li><a href="#paperless">Paperless Consultation</a></li>
+        <li><a href="#why-us">Why Choose Us</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#enquiry">Enquiry &amp; Appointment</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms &amp; Conditions</a></li>
+      </ul>
+    </nav>
+
     <div class="footer-bottom">
       <span>© 2026 Kathirvel's Consultancy. All rights reserved.</span>
       <span>Contact person: S. Kathirvel</span>
@@ -1270,7 +1312,7 @@
   messageInput.addEventListener("input", updateCount);
   updateCount();
 
-  /* Phone: keep digits only, allow a leading +91 or 0 to be typed and normalised on submit */
+  /* Phone: allow digits, spaces, hyphens and a leading + only */
   phoneInput.addEventListener("input", function () {
     const cleaned = phoneInput.value.replace(/[^\d+\s-]/g, "");
     if (cleaned !== phoneInput.value) phoneInput.value = cleaned;
@@ -1310,7 +1352,7 @@
     if (!/^[6-9]\d{9}$/.test(phone)) {
       showError(phoneInput, "phoneError");
       valid = false;
-      firstInvalid = firstInvalid || phoneInput.id && phoneInput;
+      firstInvalid = firstInvalid || phoneInput;
     } else {
       clearError(phoneInput, "phoneError");
     }
@@ -1376,7 +1418,7 @@
     updateCount();
   }
 
-  function showError2() {
+  function showSendError() {
     formStatus.className = "form-status show error";
     formStatus.textContent = "Something went wrong while sending your request. Please try again, or call or WhatsApp +91 9092049885.";
   }
@@ -1410,7 +1452,7 @@
       mode: "no-cors"
     })
       .then(function () { showSuccess(); })
-      .catch(function () { showError2(); })
+      .catch(function () { showSendError(); })
       .finally(function () { setLoading(false); });
   });
 
